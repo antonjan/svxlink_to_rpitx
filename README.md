@@ -13,7 +13,9 @@ Functional Description : The receiver side is all handled by allready existing f
 
 # Gnuradio Block diagram
 ![gnuradio block diagram](images/Rpitx_grc.JPG?raw=true "Block diagram")<br>
-
+# Hardware
+1) Raspberry Pi hat from Giga Technology http://www.giga.co.za<br>
+![gnuradio block diagram](images/rpitx_board_1.png?raw=true "Block diagram")<br>
 # Project Status
 Just started project not compleet yet.
 
