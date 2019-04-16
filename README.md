@@ -19,7 +19,7 @@ Functional Description : The receiver side is all handled by allready existing f
 3) rtl SDR dongle
 ![Hardware diagram](images/svxlink_to_rpitx.png?raw=true "Block diagram")<br>
 # Project Status
-Just started project not compleet yet.
+Working SVX link system.
 
 # SVX Configuration
 
