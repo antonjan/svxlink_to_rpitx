@@ -12,4 +12,12 @@ Gnuradio will be used to interface between svxlink and rpitx and from rtl_sdr an
 # Project Status
 Just started project not compleet yet.
 
-#
+# SVX Configuration
+
+SVXlink configuration changes are :<br>
+
+In [RX1] of svxlink.conf configure TYPE=Ddr, SIGLEV_DET=DDR, SIGLEV_DET=2.61, SIGLEV_OFFSET=150, FQ=433540000, WBRX=WbRX1<br>
+
+In [WbRX1] put TYPE=RtlUSB, DEV_MATCH=0, HOST=localhost, PORT=1234, CENTER_FQ=433540000, GAIN=3.7,PEAK_METER=1, SAMPLE_RATE=960000<br>
+
+In [TX1] put TYPE=LOCAL, AUDIO_DEV=udp:127.0.0.1:1235, AUDO_CHANNEL=0, PTT_TYPE=PTY, PTT_PTY=/home/pi/ptt<br> 
