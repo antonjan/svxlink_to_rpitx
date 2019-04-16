@@ -3,7 +3,8 @@ This repository will have the code to use rtl_sdr dongle vir reception and rpitx
 I got insperation from the code devloped here http://www.pg540.org/wiki/index.php/RPITX_interface_to_SVXlink_using_GNUradio
 # Description
 This project will run on a raspberry Pi and use rpitx Transmitter board from Giga Technology for TX and rtl_sdr dongle for reseption.<br>
-Gnuradio will be used to interface between svxlink and rpitx and from rtl_sdr and svxlink
+Gnuradio will be used to interface between svxlink and rpitx and from rtl_sdr and svxlink<br>
+Functional Description : The receiver side is all handled by allready existing functionality in SVXLink using Ddr receiver. All configuration is well documented in svxlink.conf. The transmitter part interface is made out of 3 components. The audio coming from SVXlink TX1 is routed via UDP port 1235 to GNUradio, the PTT is routed to PseudoTTY port /home/pi/ptt and the TCP output port 8011 of GNUradio IQ stream is routed to RPITX. When SVXlink wants to transmit it sends a charackter T to the PseudoTTY device ( PTT ON ), a perl script which is started after the start of SVXlink will monitor this PseudoTTY and once it will see the character T it will execute other script starting first RPITX snd then Python GNUradio script. This will switch on the transmitter and audio is routed to RPITX. When SVXlink need to stop transmitting then the character R is send by SVXlink to the PseudoTTY and received by the script monitoring the PTY. It will kill RPITX and Python GNUradio script. As it takes a bit of time to start RPITX ( initializing the PLL ) and starting the TCP listener and starting Python some extra delay is given to SVXLink in the configuration. 
 #Dependinsies
 1) rpitx<br>
 2) rtl_sdr
