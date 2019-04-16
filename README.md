@@ -8,6 +8,10 @@ Gnuradio will be used to interface between svxlink and rpitx and from rtl_sdr an
 1) rpitx<br>
 2) rtl_sdr
 3) svxlink
+4) gnuradio
+
+# Gnuradio Block diagram
+![gnuradio block diagram](images/Rpitx_grc.JPG?raw=true "Block diagram")<br>
 
 # Project Status
 Just started project not compleet yet.
