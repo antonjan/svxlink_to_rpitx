@@ -31,6 +31,8 @@ set the echolink audio level in the svxlink.conf<br>
 ![Hardware diagram](images/svxlink_to_rpitx.png?raw=true "Block diagram")<br>
 # Project Status
 Working SVX link system.
+# rtl recever
+sudo rtl_fm -f 94700000 -s 44100 -g 50 -l 0 - | sudo aplay -D hw:1,0 -t raw -f S16_LE -r 44100 -c 1
 
 # SVX Configuration
 
